@@ -1,9 +1,9 @@
 from telethon import TelegramClient
 from datetime import datetime ,timedelta
-import common
 
-api_id = common.api_id # api_id И api_hash кагуглишь как достать для своего аккауента
-api_hash = common.api_hash # если мне не изменяет память его сюдв надо подать как строку
+
+api_id = 123 # api_id И api_hash кагуглишь как достать для своего аккауента
+api_hash = 'zzz' # если мне не изменяет память его сюдв надо подать как строку
 #  common.api_id ---> '5678678657' или что там у тебя будет
 client = TelegramClient('smf', api_id, api_hash)
 
@@ -84,7 +84,7 @@ def main2(promezjutokilinet,msgs): # эта супер костыльная фу
         print('Программа не будет работать, обещаю!!!')
 
 def createmessage(msgs,daymes,monthmes,yearmes): # функция выводящая все сообщения в консоль
-    for i in range(300):
+    for i in range(len(msgs)):
         if msgs[i].date.day == daymes:
             if msgs[i].date.month == monthmes:
                 if msgs[i].date.year == yearmes:
